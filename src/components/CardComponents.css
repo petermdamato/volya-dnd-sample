@@ -1,0 +1,231 @@
+/* SimpleCard Styles */
+.simple-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: "Arial", sans-serif;
+}
+/* Ensure cards maintain their own dimensions */
+.simple-card,
+.complex-card {
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  height: auto !important; /* Override any inherited heights */
+}
+.simple-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.simple-card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.simple-card-title {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.simple-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.simple-card-body p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.simple-badge {
+  background: #667eea;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+/* ComplexCard Styles */
+.complex-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 20px 12px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.complex-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd89b, #19547b);
+}
+
+.complex-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.complex-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.complex-card-avatar {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.complex-card-title-section {
+  flex: 1;
+}
+
+.complex-card-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.complex-card-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.complex-card-menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.complex-card-menu:hover {
+  opacity: 1;
+}
+
+.complex-card-body {
+  margin-bottom: 16px;
+}
+
+.complex-card-stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.complex-card-progress {
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffd89b, #19547b);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.complex-card-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.complex-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complex-card-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.complex-card-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.complex-card-actions {
+  display: flex;
+  gap: 12px;
+  font-size: 1.1rem;
+}
+
+.complex-card-actions span {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.complex-card-actions span:hover {
+  opacity: 1;
+}
